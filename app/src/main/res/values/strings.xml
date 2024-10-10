@@ -1,0 +1,15 @@
+<resources>
+    <string name="app_name">Ar Project</string>
+
+    <string name="scaffold_snackbar_message">El dispositivo no soporta la realidad aumentada</string>
+
+    <string name="products_price">Precio</string>
+    <string name="products_variety_of_models">Variedad de modelos:\u00A0</string>
+
+    <string name="ar_product_limit_models">Haz alcanzado el límite</string>
+    <string name="ar_product_delete_models_btn">Eliminar modelos</string>
+    <string name="ar_product_error_toast">Ocurrio un error al cargar el modelo</string>
+
+    <string name="point_your_phone_down">Apunta el teléfono hacia un espacio vacío y muévelo lentamente</string>
+    <string name="tap_anywhere_to_add_model">Toca cualquier lugar para agregar un modelo</string>
+</resources>
