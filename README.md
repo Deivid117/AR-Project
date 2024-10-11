@@ -20,14 +20,25 @@
 
 ## Descripción :open_book:
 
-El proyecto es una aplicación Kotlin diseñada con Jetpack Compose y usando las arquitecturas MVVM en conjunto con Clean Architecture, la cual consume la API https://api.rawg.io/docs/ :link: de la web [RAWG :video_game:](https://rawg.io/) la cual es una base de datos con más de 350,000 juegos en su catálogo, disponible para que 
-cualquier desarrollador pueda hacer uso de ella en sus proyectos y acceda a todo su contenido, desde próximos lanzamientos, los juegos más votados, favoritos del público, etc.
+El proyecto es una aplicación Kotlin diseñada con Jetpack Compose y usando las arquitecturas MVVM en conjunto con Clean Architecture, la cual simula el uso de la Realidad Aumentada en una mini app tipo e-commerce. La aplicación cuenta con una interfaz principal donde muestra los detalles generales de un posible producto de alguna tienda, permitiendo ver a mayor detalle la imagen del producto y cómo es que este se vería ya en el hogar de quien busque adquirirlo.<br>
+La idea principal es la Realidad Aumentada, permitir que los usuarios puedan ver modelos 3D de los productos y poder analizarlos a mayor detalle, saber cómo lucirían en su sala, comedor, habitación, etc. o simplemente por mera curiosidad (si es que tu dispositivo es compatible con AR Core).
 
-En nuestra aplicación podrás encontrar información detallada de cada título, género o plataforma, así como también crear tu cuenta para registrar tus títulos favoritos. Con una interfaz moderna, animaciones que enriquecen la experiencia y fácil de navegar,
-podrás explorar una vasta colección de juegos y tener datos sobre ellos siempre al alcance de tu mano. 
+La app realiza las validaciones por sí sola para saber si tu teléfono es compatible o no con AR Core, así como también si es necesario que instales los servicios de realidad aumentada de Google para poder hacer uso de esta tecnología.
+
 
 ### Características clave
 
+* **Realidad Aumentada**:<br>
+
+Visualiza tu próximo sillón, televisión, ¡o auto! en tiempo real gracias a la poderosa tecnología AR. ¿Quieres comprar algún artículo, pero no sabes si se lucirá bien en tu habitación, sala o comedor? No hay problema, si tu dispositivo es compatible con la Realidad Aumentada tendrás a tu disposición el uso de esta tecnología en nuestra aplicación para poder visualizar nuestros productos en cualquier parte en donde estés como si ya estuvieran contigo.
+
+* **Zoom a las imágenes de los productos**:<br>
+
+Zoomable permite a los usuarios poder ver a mayor detalle la imagen del producto, como sucede en otras aplicaciones como redes sociales, navegadores, etc.
+
+* **Próximamente: Agregar productos al carrito**:warning::hammer::<br>
+
+Simulación de cómo agregarías productos a tu carrito de compras en una app e-commerce.
 
 ## Tecnologías utilizadas :iphone:
 * **Jetpack Compose**: Toolkit moderno de UI de Android que permite construir interfaces de usuario de manera declarativa.
@@ -69,8 +80,8 @@ El proyecto está basado en los principios de Clean Architecture y sigue el patr
 ### Organización modular por features
 
 * **Core**: Contiene todos los archivos que se comparten entre todos los módulos, Shared ViewModel, Scaffold, Modifier Extensions.
-* **Product**: Responsable de permitir que el usuario inicie sesión en la app, así como también de validar sus credenciales o permitirle usar biométricos si se encuentran disponibles.
-* **Ar_Product**: Aquí el usuario se da de alta en la app, valida los datos ingresados e igualmente permite activar los datos biométricos.
+* **Product**: Muestra el listado de productos de la tienda, permite hacer zoom a la imagen del producto y valida si el servicio AR es soportado en el dispositivo.
+* **Ar_Product**: Permite hacer uso de la realidad aumentada para ver los modelos de los productos.
 
 ## Requisitos :bookmark_tabs:
 
@@ -78,22 +89,28 @@ El proyecto está basado en los principios de Clean Architecture y sigue el patr
 2. Gradle Version 8.6
 3. Kotlin 1.9.0
 4. Android API 24 o superior (Android 7+)
-5. Compatibilidad con Servicios AR de Google
+5. Compatibilidad con Servicios RA de Google
 
 ## Instalación :arrow_down:
 
 1. Clona el repositorio:
    ```
     git clone https://github.com/Deivid117/AR-Project.git
-
 2. Ejecuta el proyecto :rocket:
 
 ## Capturas :camera:
 
+<p align="center">
+  <img src="https://github.com/user-attachments/assets/a1117917-b497-4a14-88e1-961250499b63" alt="Descripción de la imagen">
+</p>
+
+<p align="center">
+  <img src="https://github.com/user-attachments/assets/71edffef-2f52-45d1-9ffb-06c5e185a35d" alt="Descripción de la imagen">
+</p>
 
 ## Video demostrativo :movie_camera:
 
-<a href="https://drive.google.com/file/d/1ev2-y-BYaefwfdCjdN_7uhFPHU8jVEYJ/view?usp=sharing">
+<a href="https://drive.google.com/file/d/14GXW36HICYBTla9Kmwjvvks-cLNwxynL/view?usp=sharing">
   <img src="https://github.com/user-attachments/assets/aa30fd95-7b0d-42dd-810b-a2752fab2f38" alt="Game app video"/>
 </a>
 
