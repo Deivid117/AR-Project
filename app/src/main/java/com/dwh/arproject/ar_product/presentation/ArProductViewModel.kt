@@ -1,4 +1,4 @@
-package com.dwh.arproject.product_ar.presentation
+package com.dwh.arproject.ar_product.presentation
 
 import androidx.lifecycle.ViewModel
 import dagger.hilt.android.lifecycle.HiltViewModel

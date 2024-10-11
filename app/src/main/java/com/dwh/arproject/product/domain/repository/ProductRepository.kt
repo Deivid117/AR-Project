@@ -1,7 +1,7 @@
-package com.dwh.arproject.home.domain.repository
+package com.dwh.arproject.product.domain.repository
 
 import android.app.Activity
-import com.dwh.arproject.home.domain.model.Product
+import com.dwh.arproject.product.domain.model.Product
 
 interface ProductRepository {
     fun getProducts() : List<Product>

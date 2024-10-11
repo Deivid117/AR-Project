@@ -1,7 +1,7 @@
-package com.dwh.arproject.home.domain.use_case
+package com.dwh.arproject.product.domain.use_case
 
 import android.app.Activity
-import com.dwh.arproject.home.domain.repository.ProductRepository
+import com.dwh.arproject.product.domain.repository.ProductRepository
 import javax.inject.Inject
 
 class RequestARServiceInstallUseCase @Inject constructor(

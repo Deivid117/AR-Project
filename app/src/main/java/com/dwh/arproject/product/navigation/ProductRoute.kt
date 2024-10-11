@@ -1,4 +1,4 @@
-package com.dwh.arproject.home.navigation
+package com.dwh.arproject.product.navigation
 
 import android.app.Activity
 import androidx.compose.animation.core.tween
@@ -14,9 +14,9 @@ import androidx.navigation.compose.composable
 import com.dwh.arproject.core.navigation.NavigationScreens
 import com.dwh.arproject.core.navigation.Screens
 import com.dwh.arproject.core.presentation.sharedViewModel
-import com.dwh.arproject.home.presentation.composables.ImageZoomDialog
-import com.dwh.arproject.home.presentation.ProductScreen
-import com.dwh.arproject.home.presentation.ProductViewModel
+import com.dwh.arproject.product.presentation.composables.ImageZoomDialog
+import com.dwh.arproject.product.presentation.ProductScreen
+import com.dwh.arproject.product.presentation.ProductViewModel
 
 fun NavGraphBuilder.productGraph(navController: NavController) {
     composable(

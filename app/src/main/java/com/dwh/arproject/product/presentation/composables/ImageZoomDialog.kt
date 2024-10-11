@@ -1,4 +1,4 @@
-package com.dwh.arproject.home.presentation.composables
+package com.dwh.arproject.product.presentation.composables
 
 import androidx.compose.foundation.Image
 import androidx.compose.foundation.layout.Arrangement

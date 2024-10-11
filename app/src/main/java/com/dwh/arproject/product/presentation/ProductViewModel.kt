@@ -1,13 +1,13 @@
-package com.dwh.arproject.home.presentation
+package com.dwh.arproject.product.presentation
 
 import android.app.Activity
 import android.content.Context
 import androidx.lifecycle.ViewModel
 import androidx.lifecycle.viewModelScope
-import com.dwh.arproject.home.domain.model.ArProductModel
-import com.dwh.arproject.home.domain.model.Product
-import com.dwh.arproject.home.domain.use_case.GetModelsUseCase
-import com.dwh.arproject.home.domain.use_case.RequestARServiceInstallUseCase
+import com.dwh.arproject.product.domain.model.ArProductModel
+import com.dwh.arproject.product.domain.model.Product
+import com.dwh.arproject.product.domain.use_case.GetModelsUseCase
+import com.dwh.arproject.product.domain.use_case.RequestARServiceInstallUseCase
 import com.google.ar.core.ArCoreApk
 import dagger.hilt.android.lifecycle.HiltViewModel
 import kotlinx.coroutines.Dispatchers

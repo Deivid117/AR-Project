@@ -1,4 +1,4 @@
-package com.dwh.arproject.product_ar.navigation
+package com.dwh.arproject.ar_product.navigation
 
 import androidx.compose.animation.AnimatedContentTransitionScope
 import androidx.compose.animation.core.tween
@@ -12,9 +12,9 @@ import androidx.navigation.NavGraphBuilder
 import androidx.navigation.compose.composable
 import com.dwh.arproject.core.navigation.NavigationScreens
 import com.dwh.arproject.core.presentation.sharedViewModel
-import com.dwh.arproject.home.presentation.ProductViewModel
-import com.dwh.arproject.product_ar.presentation.ArProductScreen
-import com.dwh.arproject.product_ar.presentation.ArProductViewModel
+import com.dwh.arproject.product.presentation.ProductViewModel
+import com.dwh.arproject.ar_product.presentation.ArProductScreen
+import com.dwh.arproject.ar_product.presentation.ArProductViewModel
 
 fun NavGraphBuilder.arProductGraph(navController: NavController) {
     composable(
