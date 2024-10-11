@@ -1,4 +1,4 @@
-package com.dwh.arproject.product_ar.presentation
+package com.dwh.arproject.ar_product.presentation
 
 import android.content.Context
 import android.util.Log
@@ -34,6 +34,7 @@ import androidx.compose.material3.CircularProgressIndicator
 import androidx.compose.material3.Icon
 import androidx.compose.material3.IconButton
 import androidx.compose.material3.IconButtonDefaults
+import androidx.compose.material3.MaterialTheme
 import androidx.compose.material3.Text
 import androidx.compose.runtime.Composable
 import androidx.compose.runtime.DisposableEffect
@@ -58,7 +59,7 @@ import coil.compose.AsyncImage
 import coil.request.ImageRequest
 import com.dwh.arproject.R
 import com.dwh.arproject.core.presentation.ArScaffold
-import com.dwh.arproject.home.domain.model.ArProductModel
+import com.dwh.arproject.product.domain.model.ArProductModel
 import com.dwh.arproject.ui.theme.OrangeButton
 import com.dwh.arproject.ui.theme.OrangeBorderSelectedModel
 import com.dwh.arproject.ui.theme.OrangeCircularProgressIndicator
@@ -288,9 +289,9 @@ private fun ArSceneProducts(modelName: String, bottomPaddingButton: Dp) {
             modifier = Modifier
                 .fillMaxWidth()
                 .align(Alignment.TopCenter)
-                .padding(top = 55.dp, start = 2.dp, end = 2.dp),
+                .padding(top = 60.dp, start = 2.dp, end = 2.dp),
             textAlign = TextAlign.Center,
-            fontSize = 13.sp,
+            style = MaterialTheme.typography.labelLarge,
             color = Color.White,
             lineHeight = 18.sp,
             text = trackingFailureReason?.getDescription(LocalContext.current) ?: if (childNodes.isEmpty()) {
@@ -320,7 +321,7 @@ private fun ArSceneProducts(modelName: String, bottomPaddingButton: Dp) {
                 border = BorderStroke(2.dp, Color.White),
                 colors = ButtonDefaults.buttonColors(containerColor = OrangeButton)
             ) {
-                Text(text = stringResource(id = R.string.ar_product_delete_models_btn))
+                Text(text = stringResource(id = R.string.ar_product_delete_models_btn), style = MaterialTheme.typography.labelMedium)
             }
         }
     }

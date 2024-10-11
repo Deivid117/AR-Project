@@ -1,4 +1,4 @@
-package com.dwh.arproject.home.presentation
+package com.dwh.arproject.product.presentation
 
 import androidx.compose.foundation.background
 import androidx.compose.foundation.clickable
@@ -19,6 +19,7 @@ import androidx.compose.foundation.shape.CutCornerShape
 import androidx.compose.material3.Card
 import androidx.compose.material3.CardDefaults
 import androidx.compose.material3.Icon
+import androidx.compose.material3.MaterialTheme
 import androidx.compose.material3.Text
 import androidx.compose.runtime.Composable
 import androidx.compose.ui.Alignment
@@ -33,6 +34,7 @@ import androidx.compose.ui.res.stringResource
 import androidx.compose.ui.res.vectorResource
 import androidx.compose.ui.text.SpanStyle
 import androidx.compose.ui.text.buildAnnotatedString
+import androidx.compose.ui.text.font.FontWeight
 import androidx.compose.ui.text.style.TextAlign
 import androidx.compose.ui.text.withStyle
 import androidx.compose.ui.unit.dp
@@ -42,8 +44,9 @@ import coil.request.ImageRequest
 import com.dwh.arproject.R
 import com.dwh.arproject.core.presentation.ArScaffold
 import com.dwh.arproject.core.presentation.clickableSingle
-import com.dwh.arproject.home.domain.model.ArProductModel
-import com.dwh.arproject.home.domain.model.Product
+import com.dwh.arproject.product.domain.model.ArProductModel
+import com.dwh.arproject.product.domain.model.Product
+import com.dwh.arproject.ui.theme.Rubik
 import com.dwh.arproject.ui.theme.YellowCardBackground
 import com.dwh.arproject.ui.theme.YellowText
 
@@ -133,14 +136,16 @@ private fun ProductItem(
             )
 
             Column(modifier = Modifier.weight(1f)) {
-                Text(text = name.replaceFirstChar { it.uppercase() }, fontSize = 20.sp, color = YellowText)
+                Text(text = name.replaceFirstChar { it.uppercase() }, style = MaterialTheme.typography.titleMedium, color = YellowText)
 
-                Text(text = "${stringResource(id = R.string.products_price)}: $price", fontSize = 15.sp)
+                Text(text = "${stringResource(id = R.string.products_price)}: $price", style = MaterialTheme.typography.bodySmall)
 
-                Spacer(modifier = Modifier.height(5.dp))
+                Spacer(modifier = Modifier.height(10.dp))
 
                 Text(
                     modifier = Modifier.fillMaxWidth(),
+                    fontFamily = Rubik,
+                    fontWeight = FontWeight.Medium,
                     text = buildAnnotatedString {
                         withStyle(SpanStyle(fontSize = 10.sp)) {
                             append(stringResource(id = R.string.products_variety_of_models))

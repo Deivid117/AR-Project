@@ -1,4 +1,4 @@
-package com.dwh.arproject.home.domain.model
+package com.dwh.arproject.product.domain.model
 
 import kotlinx.uuid.UUID
 import kotlinx.uuid.generateUUID

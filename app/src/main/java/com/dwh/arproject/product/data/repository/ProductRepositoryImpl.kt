@@ -1,11 +1,11 @@
-package com.dwh.arproject.home.data.repository
+package com.dwh.arproject.product.data.repository
 
 import android.app.Activity
 import android.util.Log
 import com.dwh.arproject.R
-import com.dwh.arproject.home.domain.model.ArProductModel
-import com.dwh.arproject.home.domain.model.Product
-import com.dwh.arproject.home.domain.repository.ProductRepository
+import com.dwh.arproject.product.domain.model.ArProductModel
+import com.dwh.arproject.product.domain.model.Product
+import com.dwh.arproject.product.domain.repository.ProductRepository
 import com.google.ar.core.ArCoreApk
 import com.google.ar.core.exceptions.UnavailableUserDeclinedInstallationException
 import javax.inject.Inject
