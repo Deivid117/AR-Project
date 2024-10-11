@@ -136,9 +136,9 @@ private fun ProductItem(
             )
 
             Column(modifier = Modifier.weight(1f)) {
-                Text(text = name.replaceFirstChar { it.uppercase() }, style = MaterialTheme.typography.titleMedium, color = YellowText)
+                Text(text = name.replaceFirstChar { it.uppercase() }, style = MaterialTheme.typography.titleLarge, color = YellowText)
 
-                Text(text = "${stringResource(id = R.string.products_price)}: $price", style = MaterialTheme.typography.bodySmall)
+                Text(text = "${stringResource(id = R.string.products_price)}: $price", style = MaterialTheme.typography.bodyLarge)
 
                 Spacer(modifier = Modifier.height(10.dp))
 
@@ -147,10 +147,10 @@ private fun ProductItem(
                     fontFamily = Rubik,
                     fontWeight = FontWeight.Medium,
                     text = buildAnnotatedString {
-                        withStyle(SpanStyle(fontSize = 10.sp)) {
+                        withStyle(SpanStyle(fontSize = 12.sp)) {
                             append(stringResource(id = R.string.products_variety_of_models))
                         }
-                        withStyle(SpanStyle(YellowText, fontSize = 10.sp)) {
+                        withStyle(SpanStyle(YellowText, fontSize = 12.sp)) {
                             append("$numberModels")
                         }
                     },

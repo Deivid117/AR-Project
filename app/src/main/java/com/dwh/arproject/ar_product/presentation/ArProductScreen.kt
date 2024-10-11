@@ -291,7 +291,7 @@ private fun ArSceneProducts(modelName: String, bottomPaddingButton: Dp) {
                 .align(Alignment.TopCenter)
                 .padding(top = 60.dp, start = 2.dp, end = 2.dp),
             textAlign = TextAlign.Center,
-            style = MaterialTheme.typography.labelLarge,
+            style = MaterialTheme.typography.titleMedium,
             color = Color.White,
             lineHeight = 18.sp,
             text = trackingFailureReason?.getDescription(LocalContext.current) ?: if (childNodes.isEmpty()) {
@@ -321,20 +321,20 @@ private fun ArSceneProducts(modelName: String, bottomPaddingButton: Dp) {
                 border = BorderStroke(2.dp, Color.White),
                 colors = ButtonDefaults.buttonColors(containerColor = OrangeButton)
             ) {
-                Text(text = stringResource(id = R.string.ar_product_delete_models_btn), style = MaterialTheme.typography.labelMedium)
+                Text(text = stringResource(id = R.string.ar_product_delete_models_btn), style = MaterialTheme.typography.labelLarge)
             }
         }
     }
 
     LaunchedEffect(modelName) {
-        tempAnchorNode?.anchor?.detach()
+        //tempAnchorNode?.anchor?.detach()
         tempAnchorNode = null
         modelInstances.clear()
     }
 
     DisposableEffect(Unit) {
         onDispose {
-            tempAnchorNode?.anchor?.detach()
+            //tempAnchorNode?.anchor?.detach()
             tempAnchorNode = null
             modelInstances.clear()
             childNodes.clear()
