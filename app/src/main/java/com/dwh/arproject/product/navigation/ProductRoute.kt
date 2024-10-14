@@ -11,12 +11,14 @@ import androidx.lifecycle.compose.collectAsStateWithLifecycle
 import androidx.navigation.NavController
 import androidx.navigation.NavGraphBuilder
 import androidx.navigation.compose.composable
+import com.dwh.arproject.product.presentation.cart_state.AddToCartContainer
 import com.dwh.arproject.core.navigation.NavigationScreens
 import com.dwh.arproject.core.navigation.Screens
 import com.dwh.arproject.core.presentation.sharedViewModel
 import com.dwh.arproject.product.presentation.composables.ImageZoomDialog
 import com.dwh.arproject.product.presentation.ProductScreen
 import com.dwh.arproject.product.presentation.ProductViewModel
+import com.dwh.arproject.ui.theme.LocalAddToCartState
 
 fun NavGraphBuilder.productGraph(navController: NavController) {
     composable(
@@ -32,6 +34,8 @@ fun NavGraphBuilder.productGraph(navController: NavController) {
         val productImage by viewModel.productImage.collectAsStateWithLifecycle()
         val isSnackBarVisible by viewModel.isSnackBarVisible.collectAsStateWithLifecycle()
 
+        val addToCartState = LocalAddToCartState.current
+
         LaunchedEffect(Unit) {
             viewModel.getProducts()
         }
@@ -42,16 +46,19 @@ fun NavGraphBuilder.productGraph(navController: NavController) {
             onDismiss = { viewModel.hideImageZoomDialog() }
         )
 
-        ProductScreen(
-            products = products,
-            isSnackBarVisible = isSnackBarVisible,
-            onDismissSnackBar = { viewModel.hideSnackBar() },
-            onShowZoomDialog = { viewModel.showImageZoomDialog(it) }
-        ) { arProductModels ->
-            viewModel.isDeviceSupportArCore(context = context, activity = context as Activity) {
-                if (it) {
-                    viewModel.setArProductModels(arProductModels)
-                    navController.navigate(Screens.AR_PRODUCT_SCREEN.name)
+        AddToCartContainer(addToCartState) {
+            ProductScreen(
+                products = products,
+                addToCardState = addToCartState,
+                isSnackBarVisible = isSnackBarVisible,
+                onDismissSnackBar = { viewModel.hideSnackBar() },
+                onShowZoomDialog = { viewModel.showImageZoomDialog(it) }
+            ) { arProductModels ->
+                viewModel.isDeviceSupportArCore(context = context, activity = context as Activity) {
+                    if (it) {
+                        viewModel.setArProductModels(arProductModels)
+                        navController.navigate(Screens.AR_PRODUCT_SCREEN.name)
+                    }
                 }
             }
         }

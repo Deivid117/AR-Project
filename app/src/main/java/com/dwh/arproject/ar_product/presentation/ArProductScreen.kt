@@ -99,20 +99,14 @@ fun ArProductScreen(
     onBackClick: () -> Unit
 ) {
     ArScaffold {
-        Box(
-            modifier = Modifier
-                .background(Color.Black)
-                .fillMaxSize()
-        ) {
-            ArProductView(
-                backButtonModifier = Modifier.align(Alignment.TopStart),
-                modelsSelectionModifier = Modifier.align(Alignment.BottomEnd),
-                arProductModelS = arProductModelS,
-                modelName = modelName,
-                onSetModelName = onSetModelName,
-                onBackClick = onBackClick
-            )
-        }
+        ArProductView(
+            backButtonModifier = Modifier.align(Alignment.TopStart),
+            modelsSelectionModifier = Modifier.align(Alignment.BottomEnd),
+            arProductModelS = arProductModelS,
+            modelName = modelName,
+            onSetModelName = onSetModelName,
+            onBackClick = onBackClick
+        )
     }
 }
 
@@ -127,19 +121,25 @@ private fun ArProductView(
 ) {
     var selectedModel by remember { mutableStateOf(arProductModelS.first()) }
     val productHasManyModels = arProductModelS.size > 1
-    
-    ArSceneProducts(modelName = modelName, bottomPaddingButton = if (productHasManyModels) 150.dp else 50.dp)
 
-    BackButton(modifier = backButtonModifier, onBackClick = onBackClick)
-
-    ModelsSelection(
-        modifier = modelsSelectionModifier,
-        isVisible = productHasManyModels,
-        arProductModels = arProductModelS,
-        selectedModel = selectedModel
+    Box(
+        modifier = Modifier
+            .background(Color.Black)
+            .fillMaxSize()
     ) {
-        selectedModel = it
-        onSetModelName(it.name)
+        ArSceneProducts(modelName = modelName, bottomPaddingButton = if (productHasManyModels) 150.dp else 50.dp)
+
+        BackButton(modifier = backButtonModifier, onBackClick = onBackClick)
+
+        ModelsSelection(
+            modifier = modelsSelectionModifier,
+            isVisible = productHasManyModels,
+            arProductModels = arProductModelS,
+            selectedModel = selectedModel
+        ) {
+            selectedModel = it
+            onSetModelName(it.name)
+        }
     }
 }
 

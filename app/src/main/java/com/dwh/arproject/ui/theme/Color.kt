@@ -16,5 +16,6 @@ val YellowCardBackground = Color(0xFFFFE0B3)
 val YellowStatusBar = Color(0xFFFFB700)
 
 val OrangeBorderSelectedModel = Color(0xFFB85000)
+val OrangeAddToCart = Color(0xFFB85000)
 val OrangeButton = Color(0xFFFF7003)
 val OrangeCircularProgressIndicator = Color(0xFFFF7003)

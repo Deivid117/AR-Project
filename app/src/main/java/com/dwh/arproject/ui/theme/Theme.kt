@@ -1,17 +1,16 @@
 package com.dwh.arproject.ui.theme
 
-import android.app.Activity
 import android.os.Build
 import androidx.compose.foundation.isSystemInDarkTheme
 import androidx.compose.material3.MaterialTheme
 import androidx.compose.material3.darkColorScheme
-import androidx.compose.material3.dynamicDarkColorScheme
 import androidx.compose.material3.dynamicLightColorScheme
 import androidx.compose.material3.lightColorScheme
 import androidx.compose.runtime.Composable
-import androidx.compose.ui.graphics.Color
+import androidx.compose.runtime.CompositionLocalProvider
+import androidx.compose.runtime.compositionLocalOf
 import androidx.compose.ui.platform.LocalContext
-import androidx.compose.ui.platform.LocalView
+import com.dwh.arproject.product.presentation.cart_state.AddToCartState
 
 private val DarkColorScheme = darkColorScheme(
     primary = Purple80,
@@ -36,6 +35,8 @@ private val LightColorScheme = lightColorScheme(
     */
 )
 
+val LocalAddToCartState = compositionLocalOf { AddToCartState() }
+
 @Composable
 fun ArProjectTheme(
     darkTheme: Boolean = isSystemInDarkTheme(),
@@ -51,9 +52,14 @@ fun ArProjectTheme(
         else -> LightColorScheme
     }
 
-    MaterialTheme(
-        colorScheme = colorScheme,
-        typography = Typography,
-        content = content
-    )
+    val addToCardState = AddToCartState()
+
+
+    CompositionLocalProvider(value = LocalAddToCartState provides addToCardState) {
+        MaterialTheme(
+            colorScheme = colorScheme,
+            typography = Typography,
+            content = content
+        )
+    }
 }
