@@ -36,7 +36,7 @@ Visualiza tu próximo sillón, televisión, ¡o auto! en tiempo real gracias a l
 
 Zoomable permite a los usuarios poder ver a mayor detalle la imagen del producto, como sucede en otras aplicaciones como redes sociales, navegadores, etc.
 
-* **Próximamente: Agregar productos al carrito**:warning::hammer::<br>
+* **Agregar productos al carrito**:warning::hammer::<br>
 
 Simulación de cómo agregarías productos a tu carrito de compras en una app e-commerce.
 
@@ -101,17 +101,17 @@ El proyecto está basado en los principios de Clean Architecture y sigue el patr
 ## Capturas :camera:
 
 <p align="center">
-  <img src="https://github.com/user-attachments/assets/a1117917-b497-4a14-88e1-961250499b63" alt="Descripción de la imagen">
+  <img src="https://github.com/user-attachments/assets/9d6908f6-0165-4757-8a3b-8ac8e7be33ed" alt="Descripción de la imagen">
 </p>
 
 <p align="center">
-  <img src="https://github.com/user-attachments/assets/71edffef-2f52-45d1-9ffb-06c5e185a35d" alt="Descripción de la imagen">
+  <img src="https://github.com/user-attachments/assets/297252cd-6f01-4c0f-9f47-947afd8c8179" alt="Descripción de la imagen">
 </p>
 
 ## Video demostrativo :movie_camera:
 
 <a href="https://drive.google.com/file/d/14GXW36HICYBTla9Kmwjvvks-cLNwxynL/view?usp=sharing">
-  <img src="https://github.com/user-attachments/assets/aa30fd95-7b0d-42dd-810b-a2752fab2f38" alt="Game app video"/>
+  <img src="https://github.com/user-attachments/assets/fb5587b3-90be-4232-9956-959d7ce62b9a" alt="Game app video"/>
 </a>
 
 ## Autor :man_technologist:
