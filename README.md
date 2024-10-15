@@ -110,7 +110,7 @@ El proyecto está basado en los principios de Clean Architecture y sigue el patr
 
 ## Video demostrativo :movie_camera:
 
-<a href="https://drive.google.com/file/d/14GXW36HICYBTla9Kmwjvvks-cLNwxynL/view?usp=sharing">
+<a href="https://drive.google.com/file/d/1vYzW-_KYrRGhkKS81t8w8se-dkrLT6h3/view?usp=sharing">
   <img src="https://github.com/user-attachments/assets/fb5587b3-90be-4232-9956-959d7ce62b9a" alt="Game app video"/>
 </a>
 
